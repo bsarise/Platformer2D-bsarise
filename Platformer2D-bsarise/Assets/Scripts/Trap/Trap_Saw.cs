@@ -24,7 +24,7 @@ public class Trap_Saw : Trap
 
     private void MoveTrap()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePositions[1].position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, movePositions[moveIndex].position, speed * Time.deltaTime);
 
         
 
