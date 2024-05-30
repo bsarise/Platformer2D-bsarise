@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("게임을 시작하지");
+//        Debug.Log("게임을 시작하지");
 //        transform.position = new Vector2(transform.position.x, 10);
         rigidbody2D = GetComponent<Rigidbody2D>();
         transform.position = startTransform.position;
