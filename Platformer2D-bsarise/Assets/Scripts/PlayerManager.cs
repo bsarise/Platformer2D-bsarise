@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
             PlayerStartPo();
         }
         // 만약 player 변수가 null이면 Respawn해라
-        if(player != null)
+        if(player == null)
         {
             PlayerStartPo();
         }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO.Pipes;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -13,6 +15,8 @@ public class GasRoom : MonoBehaviour
     private float Timer = 0;
     private int PlayerHP = 100;
     private int Damage = 1;
+    public GameObject aaa;
+    
 
     // Debug.Log(현재 상태를 출력해보는 코드 작성)
     // Tag를 사용해서 Player와 작동할 수 있도록 작성해보세요.
@@ -26,6 +30,7 @@ public class GasRoom : MonoBehaviour
             // Player가 알아야 할 필요성이 있겠죠. PlayerController <- 다른 클래스에서 나의 클래스를 어떻게 접근할 것인가?
             isGasState = true;
             Debug.Log($"플레이어가 현재 가스 진입 상태 : {isGasState}");
+            aaa.SetActive(true);
         }
 
     }
@@ -36,6 +41,7 @@ public class GasRoom : MonoBehaviour
         {
             isGasState = false;
             Debug.Log($"플레이어가 현재 가스 진입 상태 : {isGasState}");
+            aaa.SetActive(false);
         }
     }
 
@@ -64,4 +70,6 @@ public class GasRoom : MonoBehaviour
             Debug.Log($"플레이어의 현재 체력 : {PlayerHP}");
         }
     }
+
+
 }
