@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private bool isMove;
 
+    public bool MoP;
+
 
 
     void Start()
@@ -57,8 +59,7 @@ public class PlayerController : MonoBehaviour
         CollisionCheck();
         HandleInput();
         HandleFlip();
-        Move();
-
+        if (MoP == false){Move();}
         FallDownCheck();
     }
 
@@ -164,5 +165,10 @@ public class PlayerController : MonoBehaviour
     //        isGrounded = false;
     //    }
     //}
+
+    private void PlatformMove(Vector2 power)
+    {
+        
+    }
 }
 
