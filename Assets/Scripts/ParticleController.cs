@@ -29,6 +29,7 @@ public class ParticleController : MonoBehaviour
 
     public void PlayParticle()
     {
+        AudioManager.instance.PlaySFX(5);
         PS_My.Play();
     }
 
